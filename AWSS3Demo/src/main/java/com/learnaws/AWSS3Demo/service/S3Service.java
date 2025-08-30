@@ -24,17 +24,19 @@ public class S3Service {
     }
 
     public void uploadFile(MultipartFile file) throws IOException {
+        String key = "photos/" + file.getOriginalFilename();
         this.s3Client.putObject(
                 PutObjectRequest
                         .builder()
                         .bucket(bucketName)
-                        .key(file.getOriginalFilename())
+                        .key(key)
                         .build(),
                 RequestBody.fromBytes(file.getBytes())
         );
     }
 
     public byte[] downloadFile(String key) {
+        key = "photos/" + key;
         ResponseBytes<GetObjectResponse> objectAsBytes = this.s3Client.getObjectAsBytes(
                 GetObjectRequest
                         .builder()

@@ -3,11 +3,5 @@ AWSS3Demo/.idea/**
 AWSS3Demo/.mvn/**
 AWSS3Demo/target/**
 AWSS3Demo/src/main/resources/application.preperties
-AWSS3Demo/src/main/resources/** 
 
-# AWS EC2
-AWSEC2Demo/.idea/**
-AWSEC2Demo/.mvn/**
-AWSEC2Demo/target/**
-AWSEC2Demo/src/main/resources/application.preperties
-AWSEC2Demo/src/main/resources/** 
+AWSS3Demo/src/main/resources/** 
